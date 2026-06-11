@@ -1,8 +1,11 @@
 package rs.dp.sa.domen;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Objects;
 
-public class Korisnik {
+public class Korisnik extends ApstraktniDomenskiObjekat {
 
 	private Long korisnikId;
 	private String ime;
@@ -14,7 +17,7 @@ public class Korisnik {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Korisnik(long korisnikId, String ime, String prezime, String email, String telefon) {
+	public Korisnik(Long korisnikId, String ime, String prezime, String email, String telefon) {
 		super();
 		this.korisnikId = korisnikId;
 		this.ime = ime;
@@ -23,11 +26,11 @@ public class Korisnik {
 		this.telefon = telefon;
 	}
 
-	public long getKorisnikId() {
+	public Long getKorisnikId() {
 		return korisnikId;
 	}
 
-	public void setKorisnikId(long korisnikId) {
+	public void setKorisnikId(Long korisnikId) {
 		this.korisnikId = korisnikId;
 	}
 
@@ -83,6 +86,60 @@ public class Korisnik {
 	@Override
 	public String toString() {
 		return ime + " " + prezime;
+	}
+
+	@Override
+	public String nazivTabele() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String alijas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String join() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<ApstraktniDomenskiObjekat> vratiListu(ResultSet rs) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String koloneZaInsert() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String vrednostiZaInsert() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String vrednostiZaUpdate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String uslov() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String uslovZaSelect() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

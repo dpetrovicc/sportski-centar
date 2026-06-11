@@ -1,9 +1,12 @@
 package rs.dp.sa.domen;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
-public class ClanskaKarta {
+public class ClanskaKarta extends ApstraktniDomenskiObjekat {
 
 	private Long kartaId;
 	private Date datumAktivacije;
@@ -74,6 +77,60 @@ public class ClanskaKarta {
 	@Override
 	public String toString() {
 		return "ClanskaKarta [kartaId=" + kartaId + ", datumAktivacije=" + datumAktivacije + ", vaziDo=" + vaziDo + "]";
+	}
+
+	@Override
+	public String nazivTabele() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String alijas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String join() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<ApstraktniDomenskiObjekat> vratiListu(ResultSet rs) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String koloneZaInsert() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String vrednostiZaInsert() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String vrednostiZaUpdate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String uslov() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String uslovZaSelect() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
