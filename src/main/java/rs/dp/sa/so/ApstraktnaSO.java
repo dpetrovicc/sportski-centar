@@ -7,10 +7,10 @@ import rs.dp.sa.domen.ApstraktniDomenskiObjekat;
 
 public abstract class ApstraktnaSO {
 
-	protected abstract void validate(ApstraktniDomenskiObjekat ado);
-	protected abstract void execute(ApstraktniDomenskiObjekat ado);
+	protected abstract void validate(ApstraktniDomenskiObjekat ado) throws Exception;
+	protected abstract void execute(ApstraktniDomenskiObjekat ado) throws Exception;
 	
-	public void templateExecute(ApstraktniDomenskiObjekat ado) {
+	public void templateExecute(ApstraktniDomenskiObjekat ado) throws Exception {
 		try {
 			validate(ado);
 			execute(ado);
@@ -18,7 +18,7 @@ public abstract class ApstraktnaSO {
 		}catch (Exception e) {
 			rollback();
 			e.printStackTrace();
-			// TODO: handle exception
+			throw e;
 		}
 	}
 	
